@@ -40,10 +40,9 @@ body {
     background-color: black;
 }
 
-a {
+.menu a {
     color: black;
     text-decoration: none;
-    background-color: rgb(248, 130, 191);
     justify-content: center;
 }
 
@@ -59,7 +58,7 @@ img {
 .header-text  {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%);
     font-family: monospace;
     text-shadow: 3px 3px black;
@@ -69,34 +68,67 @@ img {
 }
 
 .content {
-    width: 75%;
-    display: inline;
+    width: 90%;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin-left: 20px;
+    margin-right: 15px;
 }
 
-p {
-    font-size: 18px;
+h2 {
+    text-shadow: 2px 2px rgb(248, 130, 191);
 }
 
-.about-me, .work, .resume, .contact-me {
+.about-me, .work, .contact-me {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex: 1;
-    margin: 5%;
+    margin: 15px;
     margin-right: 10px;
     padding-right: 25px;
+    color: yellow;
+}
+
+.about-me-content, .work-content, .contact-content, p {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 25px;
+    margin-left: auto;
+    padding-left: 25px;
     color: rgb(150, 215, 207);
 }
 
-h2 {
-    text-shadow: 1px 1px rgb(248, 130, 191);
+p {
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.about-me-content, .work-content, .resume-content, .contact-content, p {
-    display: flex;
-    align-items: flex-start;
-    margin: 10px;
-    margin-left: auto;
-    padding: 10px;
+.work-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
+
+.work-content img {
+    max-width: 98%;
+    max-height: 98%;
+    border-radius: 10%;
+    margin: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: rgb(150, 215, 207);
+}
+
+.work-content img:hover {
+    box-shadow: 4px 4px yellow;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: rgb(150, 215, 207);
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+/*rgb(150, 215, 207) */
