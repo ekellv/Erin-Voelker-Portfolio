@@ -67,6 +67,7 @@ img {
     color: rgb(204, 166, 233);
     font-size: 85px;
     font-weight: 800;
+    background-color: yellow;
 }
 
 .content {
@@ -126,6 +127,11 @@ p {
 .work-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+#placeholders {
+    grid-column: span 3;
+    grid-row: span 4;
 }
 
 .work-content a {
