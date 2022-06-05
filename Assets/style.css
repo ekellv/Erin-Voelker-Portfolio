@@ -213,6 +213,7 @@ p { /* font in about me section */
    .content {
       display: flex;
       flex-wrap: wrap;
+      flex: 1 1 0;
       width: 100%;
     }
   }
@@ -222,6 +223,7 @@ p { /* font in about me section */
     .content {
       display: flex;
       flex-wrap: wrap;
+      flex: 1, 1, 0;
       width: 100%
     }
   }
