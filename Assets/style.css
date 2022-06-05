@@ -150,7 +150,6 @@ p {
     border-color: yellow;
 }
 
-
 .placeholders header {
     text-align: center;
     font-size: 16px;
@@ -173,5 +172,20 @@ p {
     display: inline-flex;
     flex-wrap: wrap;
 }
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .placeholders, .about-me-content, .contact-content {
+      width: 50%
+    }
+  }
+  
+  @media only screen and (min-width: 0px) and (max-width: 768px) {
+    .placeholders, .about-me-content, .contact-content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%
+    }
+  }
 
 /*rgb(150, 215, 207) */
