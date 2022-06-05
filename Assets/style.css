@@ -124,6 +124,10 @@ p {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.work-content a {
+    text-decoration: none;
+}
+
 .work-content img {
     max-width: 98%;
     max-height: 98%;
