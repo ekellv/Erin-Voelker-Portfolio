@@ -96,10 +96,14 @@ h2 {
     color: yellow;
 }
 
+.work {
+    margin-left: 30px;
+}
+
 .about-me-content, .work-content, .contact-content, p {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     flex: 1;
     margin: 25px;
     margin-left: auto;
@@ -116,7 +120,7 @@ p {
     display: flex;
     max-width: 200 px;
     max-height: 300px;
-    margin-left: -40px;
+    margin-left: -20px;
 }
 
 .work-content {
