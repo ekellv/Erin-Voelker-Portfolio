@@ -122,7 +122,6 @@ p {
     display: flex;
     max-width: 200 px;
     max-height: 300px;
-    margin-left: -20px;
 }
 
 .work-content {
