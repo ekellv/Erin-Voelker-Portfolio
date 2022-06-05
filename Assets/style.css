@@ -1,26 +1,29 @@
+/* global border box settings and font */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
     padding:  0;
     margin: 0;
-    font-family: monospace;
+    font-family: monospace; 
 }
-
-.header {
-    background-color: black;
-    color: #f6f3b1;
-}
-
-.header h1 {
+/* defining h1 style and size,
+    changing left margin to 75px lines header with nav bar
+    font color and text shadow coordinate with .header-img color scheme
+*/
+.header h1 { /* my name at top of page */
     display: inline-flex;
     font-size: 80px;
     padding: 15px;
-    margin-left: 80px;
+    margin-left: 75px;
     color: rgb(204, 166, 233);
     background-color: black;
     text-shadow: 2px 2px mintcream;
 }
 
-.header div ul {
+/* removes bullet from unordered list
+    increased font size and weight to make nav easier to read
+    adding text shadow to match established aesthetics of document
+*/
+.header div ul { /* nav bar beneath my name */
     list-style-type: none;
     background-color: rgb(248, 130, 191);
     font-weight: 800;
@@ -28,9 +31,13 @@
     text-shadow: 2px 2px yellow;
 }
 
-.header div ul li {
+/* adding inline flex to keep items from interfering with header,
+    items will also collapse to make for easier viewing on smaller screens,
+    left margin of 85px to visually match line up with header
+    pink background added to match header-img
+*/
+.header div ul li { /*  */
     display: inline-flex;
-    margin-left: 50px;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -38,31 +45,43 @@
     background-color: rgb(248, 130, 191);
 }
 
+/* set background for document body */
 body {
     background-color: black;
 }
 
-.menu a {
+/* removes text decoration from links,
+    changes link color from default to black
+ */
+.menu a { /* nav bar links */
     color: black;
     text-decoration: none;
-    justify-content: center;
 }
 
-img {
+/* setting divider image header to take width of display,
+   chose 190 px for image height, any larger or smaller and it is rendered oddly 
+*/
+img { /* image between header and page content beneath nav bar */ /*  */
     width: 100%;
     height: 190px;
 }
 
+/* setting header-img to relative to set up absolute positioning of PORTFOLIO text to sit on this image */
 .header-img {
     position: relative;
 }
 
-.header-text  {
+/* absolute positioning to set PORTFOLIO onto the header img
+    using 50% top to center vertically,
+    25% left to pull eye from nav bar towards page content,
+    using translate to help push text into a more visually pleasing space
+    adding black text shadow and yellow background color to add contrast between PORTFOLIO and the image itself
+ */
+.header-text { /* PORTFOLIO text in the divider image between nav bar and page content */
     position: absolute;
     top: 50%;
     left: 25%;
-    transform: translate(-50%, -50%);
-    font-family: monospace;
+    transform: translate(-50%, -50%);   
     text-shadow: 3px 3px black;
     color: rgb(204, 166, 233);
     font-size: 85px;
@@ -70,10 +89,10 @@ img {
     background-color: yellow;
 }
 
-.content {
+/* using 85% width so content doesn't feel SO spread out but there isn't so much negative space it feels bare */
+.content { /* page contents beneath header, nav bar and the image dividing the two */
     width: 85%;
-    display: inline-flex;
-    flex-direction: column;
+    display: flex;  
     flex-wrap: wrap;
     margin-left: 20px;
     margin-right: 15px;
@@ -81,76 +100,86 @@ img {
     padding-bottom: 30px;
 }
 
-h2 {
+/* transform rotate 310 degrees to make headings sit at a unique angle to point at their respective sections, NEEDS to be separate or else whole page rotates 
+    text shadows to match page aesthetics */
+h2 { /* the heading on the left side of the page correlating to each section */
     font-size: 28px;
+    color: yellow;
     text-shadow: 2px 2px rgb(248, 130, 191);
-    transform: rotate(300deg);
-    margin-right: 200px;
+    transform: rotate(310deg);
+    margin-right: 150px;
 }
 
-.about-me, .work, .contact-me {
+/* set flex basis to auto so items flow horizonally, otherwise elements sit side by side */
+.about-me, .work, .contact-me { /* h2 headings on left side of page */  
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: center; 
     flex: 1 1 auto;
     margin: 15px;
     margin-right: 10px;
     padding-right: 25px;
-    color: yellow;
 }
 
-.work {
+/* 30px left margin manually makes this section look more aligned */
+.work { /* the page section containing project links and images (most are currently placeholders though) */
     margin-left: 30px;
 }
 
-.about-me-content, .work-content, .contact-content, p {
+/* need flex basis set to keep elements static 
+    left padding to keep heading contents more separate from h2 elements themselves
+*/
+.about-me-content, .work-content, .contact-content, p { /* the information contained within each of the h2 headings */
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     flex: 1 1 0;
     margin: 25px;
     padding-left: 25px;
     color: rgb(150, 215, 207);
 }
 
-p {
+p { /* font in about me section */
     font-size: 16px;
     font-weight: 600;
 }
 
-.profile-pic {
+/* profile pic set to these size parameters or else it warps or is too big compared to about me paragraph */
+.profile-pic { /* profile picture in ABOUT ME section */
     display: flex;
     max-width: 200 px;
     max-height: 300px;
 }
 
-.work-content {
+/* using a grid with columns to distribute content more equally than flex box was allowing */
+.work-content { /* examples of projects and placeholders under WORK h2 heading */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
-#placeholders {
+/* changing grid parameters for first element to satisfy challenge 2 requirements
+    span 3 to lengthen image without warping it into a weird shape
+*/
+#challenge-1 { /* first project listed in grid of work examples */
     grid-column: span 3;
-    grid-row: span 4;
 }
 
-.work-content a {
+/* no link decoration to disrupt style settings */
+.work-content a { /* links to project in WORK section */
     text-decoration: none;
 }
 
-.work-content img {
-    max-width: 98%;
-    max-height: 98%;
+/* adds borders to images in the WORK section to match established aesthetics */
+.work-content img { /* images in the WORK section */
     border-style: solid;
     border-color: rgb(150, 215, 207);
 }
 
-.work-content img:hover {
+/* will add a yellow shadow when hovering on images in WORK section */
+.work-content img:hover { 
     box-shadow: 4px 4px rgb(204, 166, 233);
     border-color: yellow;
 }
 
-.placeholders header {
+/* creating headers and setting style beneath each of the examples in WORK */
+.placeholders header { /* headers beneath each image in WORK */
     text-align: center;
     font-size: 16px;
     font-weight: 700;
@@ -159,34 +188,35 @@ p {
     border: solid 10px;
 }
 
+/* headers will change color and background color when hovered upon, matches the colors in h2 headings on the left */
 .placeholders header:hover {
     background: rgb(248, 130, 191);
     color: yellow;
     border: solid 10px black;
 }
 
-.contact-me a {
+/* removing defauly link decorations and color in CONTACT ME */
+.contact-me a { /* links in the CONTACT ME section of page */
     text-decoration: none;
     font-size: 22px;
     color: rgb(150, 215, 207);
-    display: inline-flexbox;
-    flex-wrap: wrap;
-    flex: 1 1 0;
 }
 
+/* determines viewing settings for mid-sized screens */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-    .placeholders, .about-me-content, .contact-content {
-      width: 50%
+    body {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
   }
-  
-  @media only screen and (min-width: 0px) and (max-width: 768px) {
-    .placeholders, .about-me-content, .contact-content {
+
+/* determines viewing settings for small sized screens */
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    body {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       width: 100%
     }
   }
-
-/*rgb(150, 215, 207) */
