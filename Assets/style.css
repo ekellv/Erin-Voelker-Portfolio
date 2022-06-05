@@ -12,7 +12,7 @@
 
 .header h1 {
     display: inline-flex;
-    font-size: 60px;
+    font-size: 80px;
     padding: 15px;
     margin-left: 80px;
     color: rgb(204, 166, 233);
@@ -77,6 +77,8 @@ img {
     flex-wrap: wrap;
     margin-left: 20px;
     margin-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 h2 {
@@ -104,10 +106,9 @@ h2 {
 .about-me-content, .work-content, .contact-content, p {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
-    flex: 1;
+    justify-content: space-between;
+    flex: 1 1 0;
     margin: 25px;
-    margin-left: auto;
     padding-left: 25px;
     color: rgb(150, 215, 207);
 }
@@ -169,8 +170,9 @@ p {
     text-decoration: none;
     font-size: 22px;
     color: rgb(150, 215, 207);
-    display: inline-flex;
+    display: inline-flexbox;
     flex-wrap: wrap;
+    flex: 1 1 0;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
