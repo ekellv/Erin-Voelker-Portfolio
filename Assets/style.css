@@ -128,7 +128,7 @@ h2 { /* the heading on the left side of the page correlating to each section */
 /* need flex basis set to keep elements static 
     left padding to keep heading contents more separate from h2 elements themselves
 */
-.about-me-content, .work-content, .contact-content, p { /* the information contained within each of the h2 headings */
+.about-me-content, .work-content,  p { /* the information contained within each of the h2 headings */
     display: flex;
     flex: 1 1 0;
     margin: 25px;
@@ -195,6 +195,12 @@ p { /* font in about me section */
     border: solid 10px black;
 }
 
+/* needs to separated out or else the links make the rest of the page act weird when viewed on a smaller screen */
+.contact-content { /* links to the right of the h2 CONTACT ME section  */
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 0;
+}
 /* removing defauly link decorations and color in CONTACT ME */
 .contact-me a { /* links in the CONTACT ME section of page */
     text-decoration: none;
@@ -204,18 +210,17 @@ p { /* font in about me section */
 
 /* determines viewing settings for mid-sized screens */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-    body {
+   .content {
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
+      width: 100%;
     }
   }
 
 /* determines viewing settings for small sized screens */
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-    body {
+    .content {
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
       width: 100%
     }
