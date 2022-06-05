@@ -1,0 +1,2 @@
+This is a portfolio project made without starter code to showcase work I have already created and will create throughout my time in the MSU bootcamp.
+I used a combination of html and css to create a unique website to display my work. 
