@@ -128,7 +128,7 @@ h2 { /* the heading on the left side of the page correlating to each section */
 /* need flex basis set to keep elements static 
     left padding to keep heading contents more separate from h2 elements themselves
 */
-.about-me-content, .work-content,  p { /* the information contained within each of the h2 headings */
+.about-me-content, .work-content, p { /* the information contained within each of the h2 headings */
     display: flex;
     flex: 1 1 0;
     margin: 25px;
